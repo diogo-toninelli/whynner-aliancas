@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="options">
+    <label>
+        <input type="radio" name="opcao" value="alianca" checked> Aliança
+      </label>
+      <label>
+        <input type="radio" name="opcao" value="anel" > Anel
+      </label>
+    </div>
+    <br>
+      <div id="tabela">
+    </div>
+    <button id="gerarPDF">Gerar PDF</button>
+    <script src="./script.js"></script>
+    <script src="./jspdf.umd.min.js"></script>
+    <script src="./jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+            var pupload = document.getElementById('p-upload-file')
+            pupload.style.display='none'
+        };
+        </script>
+</body>
+</html>
